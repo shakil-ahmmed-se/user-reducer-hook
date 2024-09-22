@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
 import ReducerCount from './components/ReducerCount/ReducerCount';
-import { useReducer, useState } from 'react';
-import { type } from '@testing-library/user-event/dist/type';
 import PatientManagement from './components/PatientManagement/PatientManagement';
+import { useReducer } from 'react';
 
 
 const initiaState = {count:0};
@@ -23,7 +21,7 @@ const reducer =(state, action) =>{
 
 
 function App() {
-  const [user, setUser] = useState(0);
+  // const [user, setUser] = useState(0);
   const [state, dispatch] = useReducer(reducer, initiaState)
   return (
     <div className="App">
